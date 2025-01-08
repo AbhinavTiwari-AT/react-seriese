@@ -22,5 +22,5 @@ function Card({username,btnText}) {
 </div>
   )
 }
-
+ 
 export default Card
