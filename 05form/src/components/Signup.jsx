@@ -103,10 +103,10 @@ function Signup() {
                     type="password" />
 
                     <button className='bg-gradient-to-r from-indigo-500 to-blue-500 text-white 
-                                       font-medium py-2 px-4 rounded-md hover:bg-indigo-600 hover:to-blue-600 
+                                       font-medium py-2 px-4 rounded-md hover:bg-indigo-900 hover:to-blue-900 
                                       transition ease-in duration-200'>Submit</button>
                     <p className='text-white mt-4 text-center'>Already have an account?
-                    <Link className="text-white-500 hover:underline mt-4 px-1 text-blue-600" to="/Login">Login</Link>
+                    <Link className="text-white-500 hover:underline mt-4 px-1 text-blue-600" to="/login">Login</Link>
                     </p>
                 </form>
             </div>
