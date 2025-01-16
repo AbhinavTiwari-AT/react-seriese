@@ -1,10 +1,16 @@
 import React,{ useState } from 'react'
+import LogoutModal from './LogoutModal';
 
 function Navbar() {
 
     const [isMenuOpen,setIsMenuOpen] = useState(false);
 
     const [isCategoryOpen,setIsCategoryOpen] = useState(false);
+
+    const [showLogoutModal, setShowLogoutModal] = useState(false);
+
+
+
 
     const toggleMenu = () => {
 
@@ -19,6 +25,10 @@ function Navbar() {
 
   const handleCategoryMouseLeave = () => {
       setIsCategoryOpen(false);
+  };
+
+  const handleLogoutClick = () => {
+    setShowLogoutModal(true);
   };
 
 
@@ -74,8 +84,7 @@ function Navbar() {
               )}
 
             </li>
-              
-            <li><a href="/Login" className='text-white'>Login</a></li>
+            <li className='text-white' onClick={handleLogoutClick}> Logout</li> 
            </ul>
         </div>
 
@@ -107,9 +116,10 @@ function Navbar() {
             </li>
 
 
-            <li className='py-2'><a href="/Login" className='text-white'>Login</a></li>
+            <li className='py-2 text-white' onClick={handleLogoutClick} >Logout</li>
            </ul>) : null} 
       </nav>
+      {showLogoutModal && <LogoutModal onClose={() => setShowLogoutModal(false)} />}
     </>
   )
 }
