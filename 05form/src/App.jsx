@@ -4,7 +4,7 @@ import Login from "./components/Login";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Products from "./components/Products";
-import Addproduct from "./components/Addproduct";
+import Order from "./components/Order";
 function App() {
 
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/login" element ={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="/products" element={<Products/>} />
+        <Route path="/order" element={<Order/>} />
         {/* <Route path="/add-product" element={<Addproduct/>} /> */}
       </Routes>
 </Router>
