@@ -16,7 +16,7 @@ function Tag({tagName,selectTag, selected}) {
     <>
      <button type='button'
              className='tag' 
-             style={selected ? tagStyle[tagName]: tagStyle.de}
+             style={selected ? tagStyle[tagName]: tagStyle.default}
              onClick={() => selectTag(tagName)}>
              {tagName}
      </button>
